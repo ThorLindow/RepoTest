@@ -7,6 +7,12 @@ view: Workshop_AL {
         sql: ${TABLE}.`Color`;;
     }
 
+    dimension: Sales_Reasons_Hierarchy_Sales_Reasons_Level {
+        label: "Sales_Reasons Level"
+        type: string
+        sql: ${TABLE}.`Sales_Reasons Level`;;
+    }
+
     dimension: Size {
         label: "Size"
         type: string
