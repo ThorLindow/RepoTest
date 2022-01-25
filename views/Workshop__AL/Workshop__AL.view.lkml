@@ -7,12 +7,6 @@ view: Workshop_AL {
         sql: ${TABLE}.`Color`;;
     }
 
-    dimension: Sales_Reasons_Hierarchy_Sales_Reasons_Level {
-        label: "Sales_Reasons Level"
-        type: string
-        sql: ${TABLE}.`Sales_Reasons Level`;;
-    }
-
     dimension: Size {
         label: "Size"
         type: string
@@ -209,6 +203,12 @@ view: Workshop_AL {
         drill_fields: [Date_YWD_Ship_Week]
     }
 
+
+    measure: m_salesorderlinenumber_count {
+        label: "Order Count"
+        type: sum
+        sql: ${TABLE}.`m_salesorderlinenumber_count`;;
+    }
 
     measure: m_customerkey_distinct_est {
         label: "Customer Count Estimate"
